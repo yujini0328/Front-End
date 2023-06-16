@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 UI 구현</title>
+    <style>
+        body{
+            font-family: "맑은 고딕", "돋움";
+        }
+        header{
+            height: 70px;
+            padding: 20px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+        nav{
+            color:white;
+        }
+        nav ul{
+            padding: 10px;
+            margin: 0px;
+            background-color: rgb(235, 164, 235);
+        }
+        nav li{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        main{
+            height: 350px;
+            background-color: rgb(213, 210, 210);
+        }
+        h1{
+            margin: 0px;
+            text-align: center;
+            position: relative;
+            top: 10%;
+        }
+        table{
+            width: 600px;
+            margin: auto;
+            position: relative;
+            top: 15%;
+        }
+        table td{
+            text-align: center;
+        }
+        table #input{
+            text-align: left;
+        }
+        input{
+            border-radius: 3px;
+        }
+        footer{
+            height: 30px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(to right,blue,skyblue) ;
+        }
+
+        /* 600픽셀 미만일때 스타일 적용 */
+        [class="c"]{
+            float: left;
+            /* padding: 10px; */
+            width: 100%;
+            margin: 0%;
+        }
+
+        /* 600픽셀 이상에서 스타일 적용 */  /* 600 이상 ~~ 768 이하까지 적용됨*/
+        @media only screen and (min-width:600px) {
+
+        /*width 100%를 12등분(그리드)해서css를 셋팅*/
+        .c_m_1{ width: 8.33%; float: left; padding: 15px; }
+        .c_m_2{ width: 16.66%; float: left; padding: 15px; }
+        .c_m_3{ width: 25%; float: left; padding: 15px; }
+        .c_m_4{ width: 33.33%; float: left; padding: 15px; }
+        .c_m_5{ width: 41.66%; float: left; padding: 15px; }
+        .c_m_6{ width: 50%; float: left; padding: 15px; }
+        .c_m_7{ width: 58.33%; float: left; padding: 15px; }
+        .c_m_8{ width: 66.66%; float: left; padding: 15px; }
+        .c_m_9{ width: 75%; float: left; padding: 15px; }
+        .c_m_10{ width: 83.33%; float: left; padding: 15px; }
+        .c_m_11{ width: 91.66%; float: left; padding: 15px; }
+        .c_m_12{ width: 100%; float: left; padding: 15px; }
+
+            
+        }
+
+        @media only screen and (min-width:768px) {
+ 
+        /* 넓이가 768픽셀 이상 데스크톱, 노트북 환경 설정*/
+        .c1{ width: 8.33%; float: left; padding: 15px; }
+        .c2{ width: 16.66%; float: left; padding: 15px; }
+        .c3{ width: 25%; float: left; padding: 15px; }
+        .c4{ width: 33.33%; float: left; padding: 15px; }
+        .c5{ width: 41.66%; float: left; padding: 15px; }
+        .c6{ width: 50%; float: left; padding: 15px; }
+        .c7{ width: 58.33%; float: left; padding: 15px; }
+        .c8{ width: 66.66%; float: left; padding: 15px; }
+        .c9{ width: 75%; float: left; padding: 15px; }
+        .c10{ width: 83.33%; float: left; padding: 15px; }
+        .c11{ width: 91.66%; float: left; padding: 15px; }
+        .c12{ width: 100%; float: left; padding: 15px; }
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="c">
+        <h1>쇼핑몰 회원관리 VER 1.0</h1>
+    </header>
+
+    <nav class="c">
+        <ul>
+            <li>회원 등록</li>
+            <li>회원목록조회/수정</li>
+            <li>회원매출조회</li>
+            <li>홈으로</li>
+        </ul>
+    </nav>
+
+    <main class="c">
+        <h1>쇼핑몰 회원 등록</h1>
+        <table border="1" class="c">
+            <tr>
+                <td>회원번호(자동발생)</td>
+                <td id="input"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>회원성명</td>
+                <td id="input"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>회원주소</td>
+                <td id="input"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>가입일자</td>
+                <td id="input"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>고객등급[A:VIP, B:일반, C:직원]</td>
+                <td id="input"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>도시코드</td>
+                <td id="input"><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button>등록</button><button>조회</button></td>
+            </tr>
+
+
+        </table>
+
+
+    </main>
+
+    <footer class="c">
+        HRDKOREA Copyright@2016 All rights reserve. Human Resources Development Service of Korea
+    </footer>
+</body>
+</html>
